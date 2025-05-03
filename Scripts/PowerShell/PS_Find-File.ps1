@@ -13,6 +13,6 @@ function Find-File {
         [string]$filepath = "C:\\"
     )
     
-    #Get-ChildItem -Path $filepath -Recurse -ErrorAction SilentlyContinue -Include $filename | ForEach-Object { $_.FullName }
+    ##Get-ChildItem -Path $filepath -Recurse -ErrorAction SilentlyContinue -Include $filename | ForEach-Object { $_.FullName }
     Get-ChildItem -Path $filepath -Recurse -Force -Include $filename -ErrorAction SilentlyContinue | Format-List -Property *
 }
